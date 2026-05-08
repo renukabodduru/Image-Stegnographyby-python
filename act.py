@@ -188,8 +188,8 @@ def decode_window():
         #     decoded_message += chr(int(byte, 2))
 
         if decoded_message.startswith(passkey):
-            entry_decoded_message.delete(0, tk.END)
-            entry_decoded_message.insert(0, decoded_message[len(passkey):-8])
+            entry_decoded_message.delete("1.0", tk.END)
+            entry_decoded_message.insert("1.0", decoded_message[len(passkey):-8])
         else:
             messagebox.showerror("Decoder", "Invalid passkey!")
 
